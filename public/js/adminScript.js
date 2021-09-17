@@ -39,6 +39,26 @@ $(function (){
         }
     })
 
+    $('.delete1').on('click',function () {
+        let selected = [];
+        let _token  = $('#csrf').val();
+        $(".sel:checked").each(function() {
+            selected.push($(this).val());
+        });
+
+        if (selected.length > 0){
+            $.ajax({
+                url: '/admin/town/delete',
+                type: 'post',
+                data: {_token : _token ,id: selected},
+                cache : false,
+                success:function (data){
+                    location.reload();
+                }
+            })
+        }
+    })
+
     $('.js_language_selector').on('change',function () {
         let lang = $(this).val();
         let _token  = $('#csrf1').val();

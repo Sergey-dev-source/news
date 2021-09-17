@@ -6,7 +6,7 @@
             <div class="right">
                 <a href="{{ route('create_town') }}" class="btn-floating btn-large waves-effect waves-light teal lighten-3"><i class="material-icons">add</i></a>
 
-                <a class="delete btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                <a class="delete1 btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
 
             </div>
         </div>

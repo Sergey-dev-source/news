@@ -68,7 +68,8 @@
     <li><a class="waves-effect" href="{{ route('category_list') }}">@lang('admin/header.category')</a></li>
     <li><a class="waves-effect" href="{{ route('country_list') }}">@lang('admin/header.country')</a></li>
     <li><a class="waves-effect" href="{{ route('sity_list') }}">@lang('admin/header.town')</a></li>
-    <li><a class="waves-effect" href="{{ route('contact') }}">@lang('admin/header.contact')</a></li>
+    <li><a class="waves-effect" href="{{ route('sity_list') }}">@lang('admin/header.town')</a></li>
+    <li><a class="waves-effect" href="{{ route('sliders') }}">@lang('admin/header.sliders')</a></li>
     <li><a class="waves-effect" href="{{ route('logout') }}">@lang('admin/header.logout')</a></li>
 
 </ul>

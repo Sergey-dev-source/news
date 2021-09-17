@@ -39,6 +39,11 @@ Route::middleware(['auth'])->group(function (){
         Route::get('/admin/town/create','Admin_sityController@create')->name('create_town');
         Route::post('/admin/town/create','Admin_sityController@add')->name('town_add');
         Route::get('/admin/town/edit/{id}','Admin_sityController@edit')->name('town_edit');
+        Route::post('/admin/town/edit_town','Admin_sityController@edit_town')->name('edit_town');
+        Route::post('/admin/town/delete','Admin_sityController@delete');
+
+        Route::get('/admin/sliders','Admin_sliderController@index')->name('sliders');
+        Route::get('/admin/sliders/create','Admin_sliderController@create')->name('create_sliders');
 
         Route::get('/admin/contact','ContactController@index')->name('contact');
 

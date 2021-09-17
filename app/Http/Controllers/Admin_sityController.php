@@ -39,7 +39,25 @@ class Admin_sityController extends Controller
     }
     public function edit($id){
         $data['town'] = Sity::where('id', $id)->first();
-        dd($data['town']);
+
         return view('admin.town.edit',$data);
+    }
+    public function edit_town(Request $request){
+        $request->validate([
+            'e_name'=>'required',
+            'r_name'=>'required',
+            'a_name'=>'required',
+        ]);
+        $town = Sity::find($request->id);
+        $town->en_sity_name = $request->e_name;
+        $town->ru_sity_name = $request->r_name;
+        $town->arm_sity_name = $request->a_name;
+        $town->save();
+        return redirect()->back()->with('success', 'Town updated successful');
+    }
+    public function delete(Request $request)
+    {
+        Sity::destroy($request->id);
+        echo 'success';
     }
 }
